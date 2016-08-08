@@ -20,14 +20,14 @@ char *fbp = 0;
 struct fb_var_screeninfo vinfo;
 struct fb_fix_screeninfo finfo;
 
-unsigned char busy = 0;
+unsigned char locked = 0;
 
 void copy_screen(DISPMANX_UPDATE_HANDLE_T handle, void* arg) {
-    if (!busy) {
-      busy = 1;
+    if (!locked) {
+      locked = 1;
       vc_dispmanx_snapshot(display, screen_resource, 0);
       vc_dispmanx_resource_read_data(screen_resource, &rect1, fbp, vinfo.xres * vinfo.bits_per_pixel / 8);
-      busy = 0;
+      locked = 0;
     }
 }
 
