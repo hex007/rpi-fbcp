@@ -6,11 +6,9 @@ I changed the while loop into a callback function on fb0 vsync and added a pause
 
 Build
 -----
-
-    $ mkdir build
-    
-    $ cd build
-    
-    $ cmake ..
-    
-    $ make 
+```
+ $ mkdir build
+ $ cd build
+ $ cmake ..
+ $ make 
+```
