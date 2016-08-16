@@ -1,4 +1,4 @@
-Raspberry Pi Framebuffer Copy
+Raspberry Pi VSynced Framebuffer Copy
 =============================
 This program used for copy primary framebuffer to secondary framebuffer (eg. FBTFT). It require lastest raspberry pi firmware (> 2013-07-11) to working properly.
 
